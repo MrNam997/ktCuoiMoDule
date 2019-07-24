@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function tryRemoveFromArray(arr, index) {
+        for (let i = 0; i < arr.length; i++){
+            if (index >= 0 && index < arr.length){
+                arr.splice(index, 1);
+                return arr;
+            }
+            else if(index >= arr.length){
+                return arr;
+            }
+        }
+        return arr;
+    }
+    let arr1 = [1,2,4,5,6];
+    let index1 = 2;
+    let ketQua = tryRemoveFromArray(arr1,index1);
+    console.log(ketQua);
+</script>
+
+</body>
+</html>
